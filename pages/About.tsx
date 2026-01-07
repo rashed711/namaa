@@ -1,65 +1,126 @@
 
 import React from 'react';
-import { Target, Eye, Shield, Award, Users, BarChart } from 'lucide-react';
+import { Target, Eye, Shield, Award, Users, BarChart, Briefcase, Globe, CheckCircle } from 'lucide-react';
+import Reveal from '../components/Reveal';
 
 const About: React.FC = () => {
   return (
     <div className="pb-20">
-      {/* Header with improved typography */}
-      <section className="bg-slate-900 text-white py-24 sm:py-32 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 text-center relative z-10">
-          <h1 className="text-4xl sm:text-6xl font-black mb-8 animate-fade-up">نماء: ريادة توريد المستقبل</h1>
-          <p className="text-lg sm:text-2xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-medium animate-fade-up delay-100">
-            نحن القوة المحركة خلف سلاسل التوريد لأكبر المشروعات القومية المصرية، نجمع بين الإرث الصناعي والابتكار اللوجستي.
-          </p>
+      {/* Header Section */}
+      <section className="bg-slate-950 text-white py-32 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img src="https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&q=80&w=2000" className="w-full h-full object-cover" alt="Nama About" />
         </div>
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-          <div className="grid grid-cols-6 h-full border-white/5 border-l">
-            {[...Array(6)].map((_, i) => <div key={i} className="border-r border-white/5 h-full"></div>)}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 sm:py-32 max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <div className="order-2 lg:order-1 opacity-0 animate-fade-up">
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-800 mb-8 leading-tight">مسيرتنا في بناء غدٍ أفضل</h2>
-            <div className="space-y-6 text-slate-600 text-lg sm:text-xl leading-loose font-medium">
-              <p>تأسست شركة نماء برؤية ثاقبة تهدف إلى إعادة صياغة معايير توريد مواد البناء في السوق المصري، مع التركيز التام على الجودة الفنية والالتزام بالمواعيد.</p>
-              <p>على مدار سنوات من التفوق، استطعنا نسج شبكة من الشراكات الاستراتيجية مع عمالقة الصناعة مثل لافارج والسويس للأسمنت وحديد عز، مما مكننا من توفير حلول متكاملة للمقاولين وشركات التطوير العقاري.</p>
-              <p>نؤمن في نماء أن كل مشروع نقوم بتوريده هو لبنة في بناء مستقبل مصر، لذا نتعامل مع كل طلب توريد بمسؤولية وطنية وهندسية كاملة.</p>
-            </div>
-          </div>
-          <div className="order-1 lg:order-2 relative opacity-0 animate-scale-in">
-            <div className="absolute -inset-4 bg-emerald-600/10 rounded-3xl -rotate-2"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&q=80&w=1200" 
-              alt="Nama Logistics Construction" 
-              className="relative z-10 rounded-2xl shadow-2xl w-full h-[400px] sm:h-[600px] object-cover" 
-            />
-            <div className="absolute -bottom-6 -right-6 bg-slate-900 text-white p-8 sm:p-12 rounded-2xl z-20 shadow-2xl animate-fade-up delay-300">
-              <div className="text-5xl sm:text-6xl font-black text-emerald-500 mb-2">100%</div>
-              <div className="font-extrabold text-sm sm:text-base text-slate-400 uppercase tracking-widest">توريد مطابق للمواصفات</div>
-            </div>
-          </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <Reveal animation="right">
+            <h1 className="text-5xl md:text-8xl font-black mb-8 leading-[0.9]">نماء: القصة<br /><span className="text-emerald-500">خلف كل بناء</span></h1>
+          </Reveal>
+          <Reveal animation="right" delay={100}>
+            <p className="text-xl md:text-3xl text-slate-400 max-w-3xl leading-relaxed font-medium">
+              نحن لسنا مجرد موردين، نحن العمود الفقري الذي يرتكز عليه حلم النهضة العمرانية في مصر.
+            </p>
+          </Reveal>
         </div>
       </section>
 
-      {/* Values with responsive grid */}
-      <section className="bg-slate-50 py-24 sm:py-32 border-y border-slate-100">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-            {[
-              { icon: <Target className="w-12 h-12" />, title: 'رسالتنا', desc: 'تمكين قطاع الإنشاءات عبر توفير حلول توريد مبتكرة تضمن استدامة نمو المشروعات العمرانية القومية.', color: 'border-emerald-600' },
-              { icon: <Eye className="w-12 h-12" />, title: 'رؤيتنا', desc: 'أن نكون الاسم الأكثر ثقة والعمود الفقري لسلاسل توريد مواد البناء في منطقة الشرق الأوسط.', color: 'border-slate-800' },
-              { icon: <Shield className="w-12 h-12" />, title: 'قيمنا', desc: 'النزاهة المهنية، الشفافية الفنية، التفاني في خدمة العميل، والابتكار المستمر في الحلول اللوجستية.', color: 'border-emerald-600' }
-            ].map((item, i) => (
-              <div key={i} className={`bg-white p-10 sm:p-12 rounded-2xl shadow-sm border-t-8 ${item.color} hover-lift opacity-0 animate-scale-in delay-${i*100}`}>
-                <div className="text-slate-800 mb-8">{item.icon}</div>
-                <h3 className="text-2xl font-black text-slate-800 mb-6">{item.title}</h3>
-                <p className="text-slate-600 text-lg leading-relaxed font-medium">{item.desc}</p>
+      {/* CEO Message / Company Intro */}
+      <section className="py-32 max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+          <Reveal animation="right">
+            <div className="sticky top-32">
+              <h2 className="text-4xl font-black text-slate-900 mb-8 border-r-8 border-emerald-600 pr-6">رؤية قيادية</h2>
+              <p className="text-2xl text-slate-600 leading-loose italic font-serif mb-12">
+                "منذ اللحظة الأولى لتأسيس نماء، كان الهدف واضحاً: أن نكون الاسم الذي لا يتردد فيه المهندسون والمقاولون عندما يتعلق الأمر بسلامة وجودة المواد الإنشائية."
+              </p>
+              <div className="flex items-center gap-6">
+                <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white text-2xl font-black">N</div>
+                <div>
+                  <h4 className="text-xl font-black text-slate-900">مجلس إدارة نماء</h4>
+                  <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">للاستثمار والتوريدات</p>
+                </div>
               </div>
+            </div>
+          </Reveal>
+
+          <Reveal animation="left" delay={200}>
+            <div className="space-y-10 text-xl text-slate-600 leading-relaxed font-medium">
+              <p>
+                بدأت رحلة نماء كاستجابة طبيعية للنمو الهائل في قطاع التشييد والبناء المصري. لقد أدركنا أن الفجوة الحقيقية ليست في توفر المواد، بل في **موثوقية التوريد والالتزام الفني**.
+              </p>
+              <p>
+                اليوم، نماء تفتخر بكونها شريكاً موثوقاً في مشاريع العاصمة الإدارية الجديدة، وتطوير الموانئ المصرية، وشبكات الطرق والكباري القومية. نحن لا نورد الأسمنت والحديد فحسب؛ نحن نورد "الطمأنينة" للمهندس في موقع العمل.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                  <Briefcase className="w-8 h-8 text-emerald-600 mb-4" />
+                  <h4 className="text-lg font-black text-slate-900 mb-2">قطاع الشركات</h4>
+                  <p className="text-sm text-slate-500 font-bold">حلول متكاملة لكبار المقاولين والمطورين العقاريين.</p>
+                </div>
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                  <Globe className="w-8 h-8 text-emerald-600 mb-4" />
+                  <h4 className="text-lg font-black text-slate-900 mb-2">التوسع القومي</h4>
+                  <p className="text-sm text-slate-500 font-bold">تغطية لوجستية تصل إلى أبعد النقاط العمرانية في مصر.</p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Values & Standards */}
+      <section className="bg-slate-900 py-32 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-24">
+            <h2 className="text-4xl md:text-6xl font-black mb-6">ثوابت نماء <span className="text-emerald-500">الجوهرية</span></h2>
+            <p className="text-slate-400 text-xl max-w-2xl mx-auto">المعايير التي لا نتنازل عنها في كل توريدة.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+              { icon: <Shield className="w-12 h-12" />, title: 'الجودة الفنية القصوى', desc: 'نخضع كافة المواد لاختبارات معملية دورية لضمان مطابقتها للمواصفات القياسية المصرية (ES) والعالمية (ASTM).' },
+              { icon: <Award className="w-12 h-12" />, title: 'الوكالة الحصرية والمعتمدة', desc: 'نحن الوكيل الرسمي لنخبة المصانع (لافارج، عز، السويس) مما يضمن لك الحصول على المنتج الأصلي بأفضل سعر.' },
+              { icon: <Users className="w-12 h-12" />, title: 'الشفافية التعاقدية', desc: 'علاقتنا مع عملائنا تقوم على الوضوح التام في جداول التوريد، الأسعار، وشهادات المنشأ والاختبار.' }
+            ].map((v, i) => (
+              <Reveal key={i} animation="up" delay={i * 200}>
+                <div className="bg-white/5 p-12 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <div className="text-emerald-500 mb-8">{v.icon}</div>
+                  <h3 className="text-2xl font-black mb-6">{v.title}</h3>
+                  <p className="text-slate-400 leading-loose text-lg font-medium">{v.desc}</p>
+                </div>
+              </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications and Compliance */}
+      <section className="py-32 max-w-7xl mx-auto px-6">
+        <div className="bg-slate-50 rounded-[3rem] p-12 md:p-20 border border-slate-100 flex flex-col md:flex-row items-center gap-16">
+          <div className="md:w-1/2">
+            <h2 className="text-4xl font-black text-slate-900 mb-8 leading-tight">الالتزام بالاستدامة والمعايير البيئية</h2>
+            <div className="space-y-6">
+              {[
+                "دعم مبادرات البناء الأخضر باستخدام أسمنت منخفض الكربون.",
+                "تحسين كفاءة النقل لتقليل الانبعاثات الكربونية لأسطولنا.",
+                "التخلص الآمن من مخلفات التعبئة والتغليف الصناعي.",
+                "شهادات مطابقة بيئية معتمدة لكافة المنتجات الموردة."
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-4">
+                  <CheckCircle className="text-emerald-600 w-6 h-6 shrink-0" />
+                  <span className="text-lg text-slate-700 font-bold">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="md:w-1/2">
+             <div className="relative group">
+                <div className="absolute -inset-4 bg-emerald-600/20 rounded-3xl -rotate-3 group-hover:rotate-0 transition-transform"></div>
+                <img 
+                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800" 
+                  alt="Quality Control" 
+                  className="relative z-10 rounded-2xl shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
+                />
+             </div>
           </div>
         </div>
       </section>
