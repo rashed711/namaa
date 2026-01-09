@@ -116,7 +116,7 @@ const About: React.FC = () => {
              <div className="relative group">
                 <div className="absolute -inset-4 bg-emerald-600/20 rounded-3xl -rotate-3 group-hover:rotate-0 transition-transform"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800" 
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-VL7mqXz0auGngvIXCH0oJ2y8oVMt6u0FFQ&s" 
                   alt="Quality Control" 
                   className="relative z-10 rounded-2xl shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
                 />

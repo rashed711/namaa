@@ -6,10 +6,10 @@ import { SERVICES } from '../constants';
 import Reveal from '../components/Reveal';
 
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000"
+  "https://media.almalnews.com/2019/7/large/%D8%A7%D9%84%D8%B3%D9%88%D9%8A%D8%B3-%D9%84%D9%84%D8%A3%D8%B3%D9%85%D9%86%D8%AA.jpg",
+  "https://assets.asharqbusiness.com/images/articles/original/16-9/SElMPp8mQm_1725698429.jpg",
+  "https://felesteen.news/thumb/w920/uploads/images/1/6BKAYKKGW7S3ft6ABfLGzTtq4oDNb4-S.jpg",
+  "https://safa.ps/uploads//images/8b468157be7d2cce26cc8ac102632e81.jpg"
 ];
 
 const StatCounter: React.FC<{ end: number, suffix: string, duration?: number }> = ({ end, suffix, duration = 2000 }) => {

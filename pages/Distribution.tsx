@@ -31,7 +31,7 @@ const Distribution: React.FC = () => {
               </div>
             </div>
           </div>
-          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200" alt="Truck Fleet" className="rounded-2xl shadow-xl" />
+          <img src="https://www.alyaum.com/uploads/images/2024/07/03/2350155.jpg" alt="Truck Fleet" className="rounded-2xl shadow-xl" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
