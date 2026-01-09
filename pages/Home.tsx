@@ -6,10 +6,9 @@ import { SERVICES } from '../constants';
 import Reveal from '../components/Reveal';
 
 const HERO_IMAGES = [
-
+  "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=2000", // موقع بناء ضخم
   "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=2000", // مصنع أسمنت
   "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?auto=format&fit=crop&q=80&w=2000", // حديد تسليح
-    "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=2000", // مصنع أسمنت
   "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000"  // أسطول لوجستي
 ];
 
@@ -49,7 +48,7 @@ const Home: React.FC = () => {
               </span>
             </Reveal>
             <Reveal animation="right" delay={100}>
-              <h1 className="text-5xl md:text-[7rem] font-black text-white leading-[0.85] mb-8 tracking-tighter">
+              <h1 className="text-5xl md:text-[7rem] font-black text-white leading-[1.1] md:leading-[1.05] mb-8 tracking-tighter">
                 نبني <span className="text-emerald-500">مستقبل</span><br />
                 الوطن <span className="text-slate-400">بصلابة</span>
               </h1>
@@ -61,7 +60,7 @@ const Home: React.FC = () => {
             </Reveal>
             <div className="flex flex-wrap gap-4">
               <Reveal animation="up" delay={400}>
-                <Link to="/products/cement" className="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-xl font-black text-lg transition-all shadow-2xl shadow-emerald-900/20 flex items-center group">
+                <Link to="/products/all" className="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-xl font-black text-lg transition-all shadow-2xl shadow-emerald-900/20 flex items-center group">
                   استكشف المنتجات
                   <ArrowLeft className="mr-3 group-hover:-translate-x-2 transition-transform" />
                 </Link>
